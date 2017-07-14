@@ -98,19 +98,6 @@ namespace Bitcoint.Api.Client
         /// </param>
         Task<HttpOperationResponse<object>> ApiEnqueueTransactionDestroyPostWithHttpMessagesAsync(DestroyRequest model = default(DestroyRequest), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
-        /// <summary>
-        /// Add multiple transfer to queue
-        /// </summary>
-        /// <param name='model'>
-        /// </param>
-        /// <param name='customHeaders'>
-        /// The headers that will be added to request.
-        /// </param>
-        /// <param name='cancellationToken'>
-        /// The cancellation token.
-        /// </param>
-        Task<HttpOperationResponse<object>> ApiEnqueueTransactionMultipletransferPostWithHttpMessagesAsync(MultipleTransferRequest model = default(MultipleTransferRequest), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
-
         /// <param name='model'>
         /// </param>
         /// <param name='customHeaders'>
@@ -344,6 +331,19 @@ namespace Bitcoint.Api.Client
         /// The cancellation token.
         /// </param>
         Task<HttpOperationResponse<ApiException>> ApiTransactionBroadcastPostWithHttpMessagesAsync(BroadcastTransactionRequest model = default(BroadcastTransactionRequest), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Broadcast multiple transfer transaction
+        /// </summary>
+        /// <param name='model'>
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse<object>> ApiTransactionMultipletransferPostWithHttpMessagesAsync(MultipleTransferRequest model = default(MultipleTransferRequest), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Return transaction hash by internal id

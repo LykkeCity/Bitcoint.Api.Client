@@ -174,38 +174,6 @@ namespace Bitcoint.Api.Client
                 }
             }
 
-            /// <summary>
-            /// Add multiple transfer to queue
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='model'>
-            /// </param>
-            public static object ApiEnqueueTransactionMultipletransferPost(this IBitcoinApi operations, MultipleTransferRequest model = default(MultipleTransferRequest))
-            {
-                return operations.ApiEnqueueTransactionMultipletransferPostAsync(model).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Add multiple transfer to queue
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='model'>
-            /// </param>
-            /// <param name='cancellationToken'>
-            /// The cancellation token.
-            /// </param>
-            public static async Task<object> ApiEnqueueTransactionMultipletransferPostAsync(this IBitcoinApi operations, MultipleTransferRequest model = default(MultipleTransferRequest), CancellationToken cancellationToken = default(CancellationToken))
-            {
-                using (var _result = await operations.ApiEnqueueTransactionMultipletransferPostWithHttpMessagesAsync(model, null, cancellationToken).ConfigureAwait(false))
-                {
-                    return _result.Body;
-                }
-            }
-
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -798,6 +766,38 @@ namespace Bitcoint.Api.Client
             public static async Task<ApiException> ApiTransactionBroadcastPostAsync(this IBitcoinApi operations, BroadcastTransactionRequest model = default(BroadcastTransactionRequest), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ApiTransactionBroadcastPostWithHttpMessagesAsync(model, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
+            /// Broadcast multiple transfer transaction
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='model'>
+            /// </param>
+            public static object ApiTransactionMultipletransferPost(this IBitcoinApi operations, MultipleTransferRequest model = default(MultipleTransferRequest))
+            {
+                return operations.ApiTransactionMultipletransferPostAsync(model).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Broadcast multiple transfer transaction
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='model'>
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<object> ApiTransactionMultipletransferPostAsync(this IBitcoinApi operations, MultipleTransferRequest model = default(MultipleTransferRequest), CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.ApiTransactionMultipletransferPostWithHttpMessagesAsync(model, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

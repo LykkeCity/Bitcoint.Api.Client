@@ -24,12 +24,12 @@ namespace Bitcoint.Api.Client.Models
         /// <summary>
         /// Initializes a new instance of the MultipleTransferRequest class.
         /// </summary>
-        public MultipleTransferRequest(System.Guid? transactionId = default(System.Guid?), string asset = default(string), string destination = default(string), decimal? fee = default(decimal?), IList<ToOneAddress> sources = default(IList<ToOneAddress>))
+        public MultipleTransferRequest(System.Guid? transactionId = default(System.Guid?), string asset = default(string), string destination = default(string), int? feeRate = default(int?), IList<ToOneAddress> sources = default(IList<ToOneAddress>))
         {
             TransactionId = transactionId;
             Asset = asset;
             Destination = destination;
-            Fee = fee;
+            FeeRate = feeRate;
             Sources = sources;
             CustomInit();
         }
@@ -56,8 +56,8 @@ namespace Bitcoint.Api.Client.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "fee")]
-        public decimal? Fee { get; set; }
+        [JsonProperty(PropertyName = "feeRate")]
+        public int? FeeRate { get; set; }
 
         /// <summary>
         /// </summary>
